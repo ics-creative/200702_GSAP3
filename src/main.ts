@@ -1,6 +1,7 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+// プラグインはgsap.registerPluginで登録
 gsap.registerPlugin(ScrollTrigger);
 
 window.addEventListener("DOMContentLoaded", () => {
@@ -19,9 +20,10 @@ window.addEventListener("DOMContentLoaded", () => {
     backgroundColor: "#0FBD94",
   });
 
-  const showHero = () => {
+  const showContent = () => {
+    // 以下のtween.play()とgsap.to()は同じことをしている
     tween.play();
-    gsap.to("h1", {
+    gsap.to("header h1", {
       opacity: 1,
     });
     gsap.to(".img-container img", {
@@ -43,7 +45,7 @@ window.addEventListener("DOMContentLoaded", () => {
           trigger: ".content",
           start: "top 75%",
           end: "bottom top",
-          toggleActions: "restart none none reset",
+          toggleActions: "restart complete reverse reset",
         },
       })
 
@@ -61,5 +63,5 @@ window.addEventListener("DOMContentLoaded", () => {
       }, "-=0.7"); // 直前のアニメーションに0.7秒かぶせる
   };
 
-  button.addEventListener("click", showHero);
+  button.addEventListener("click", showContent);
 });
