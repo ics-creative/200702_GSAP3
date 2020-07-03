@@ -16,7 +16,7 @@ window.addEventListener("DOMContentLoaded", () => {
     lineHeight: "100px",
     borderRadius: "0%",
     cursor: "default",
-    marginTop: "0px",
+    top: 0,
     backgroundColor: "#0FBD94",
   });
 
@@ -39,12 +39,12 @@ window.addEventListener("DOMContentLoaded", () => {
     });
     gsap
       .timeline({
-        defaults: { ease: "power2.out", duration: 1 },
+        defaults: { ease: "power2.out", duration: 1.5 },
         scrollTrigger: {
           markers: true,
           trigger: ".content",
           start: "top 75%",
-          end: "bottom top",
+          end: "bottom 25%",
           toggleActions: "restart complete reverse reset",
         },
       })
@@ -53,14 +53,22 @@ window.addEventListener("DOMContentLoaded", () => {
         opacity: 1,
         y: -10,
       })
-      .to(".content-text p", {
-        opacity: 1,
-        y: -10,
-      }, "-=0.7") // 直前のアニメーションに0.7秒かぶせる
-      .to(".content img", {
-        opacity: 1,
-        x: -10,
-      }, "-=0.7"); // 直前のアニメーションに0.7秒かぶせる
+      .to(
+        ".content-text p",
+        {
+          opacity: 1,
+          y: -10,
+        },
+        "-=1"
+      ) // 直前のアニメーションに0.7秒かぶせる
+      .to(
+        ".content img",
+        {
+          opacity: 1,
+          x: -10,
+        },
+        "-=1"
+      ); // 直前のアニメーションに0.7秒かぶせる
   };
 
   button.addEventListener("click", showContent);
