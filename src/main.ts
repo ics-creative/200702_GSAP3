@@ -1,5 +1,6 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import "./loading";
 
 // プラグインはgsap.registerPluginで登録
 gsap.registerPlugin(ScrollTrigger);
@@ -45,7 +46,7 @@ window.addEventListener("DOMContentLoaded", () => {
           trigger: ".content",
           start: "top 75%",
           end: "bottom 25%",
-          toggleActions: "restart complete reverse reset",
+          toggleActions: "play none none none",
         },
       })
 
@@ -71,5 +72,6 @@ window.addEventListener("DOMContentLoaded", () => {
       ); // 直前のアニメーションに0.7秒かぶせる
   };
 
+  if (!button) return;
   button.addEventListener("click", showContent);
 });

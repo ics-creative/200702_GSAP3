@@ -41,7 +41,7 @@ header h1 {
   display: flex;
   width: 600px;
   margin: 0 auto 300px;
-  border: 1px solid #a0a0a0;
+  /*border: 1px solid #a0a0a0;*/
 }
 
 .content-text {
