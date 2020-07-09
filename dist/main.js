@@ -142,7 +142,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar gsap_1 = __webpack_require__(/*! gsap */ \"./node_modules/gsap/index.js\");\nwindow.addEventListener(\"DOMContentLoaded\", function () {\n    console.log(\"loading...\");\n    // timelineを作成\n    var tl = gsap_1.gsap.timeline({\n        repeat: -1,\n        repeatDelay: 0.3,\n        defaults: { ease: \"power4.out\" },\n    });\n    // アニメーションを実行\n    tl.from(\".box\", {\n        scale: 0,\n    })\n        .to(\".box1\", {\n        left: 50,\n    })\n        .to(\".box2\", {\n        right: 50,\n    }, \"<\") // \"<\"は「前のアニメーションと同時に再生する」オプション\n        .to(\".box\", {\n        scale: 0,\n    });\n});\n\n\n//# sourceURL=webpack:///./src/loading.ts?");
+eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar gsap_1 = __webpack_require__(/*! gsap */ \"./node_modules/gsap/index.js\");\nwindow.addEventListener(\"DOMContentLoaded\", function () {\n    console.log(\"loading...\");\n    // timelineを作成\n    var tl = gsap_1.gsap.timeline({\n        repeat: -1,\n        repeatDelay: 0.3,\n        defaults: { duration: 0.5, ease: \"power4.out\" },\n    });\n    // アニメーションを実行\n    tl.from(\".box\", {\n        scale: 0,\n    })\n        .to(\".box1\", {\n        left: 50,\n    })\n        .to(\".box2\", {\n        right: 50,\n    }, \"<\") // \"<\"は「前のアニメーションと同時に再生する」オプション\n        .to(\".box\", {\n        scale: 0,\n    });\n});\n\n\n//# sourceURL=webpack:///./src/loading.ts?");
 
 /***/ }),
 

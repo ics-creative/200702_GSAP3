@@ -6,7 +6,7 @@ window.addEventListener("DOMContentLoaded", () => {
   const tl = gsap.timeline({
     repeat: -1, // アニメーションの繰り返し回数。-1で無限回
     repeatDelay: 0.3, // ループとループの間の時間
-    defaults: { ease: "power4.out" }, // tweenのデフォルトの値
+    defaults: { duration: 0.5, ease: "power4.out" }, // tweenのデフォルトの値
   });
 
   // アニメーションを実行
