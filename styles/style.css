@@ -29,7 +29,7 @@ header h1 {
   display: grid;
   gap: 100px;
   grid-auto-flow: column;
-  margin: 250px 200px 200px;
+  margin: 250px 200px 600px;
   justify-content: center;
 }
 
@@ -40,8 +40,7 @@ header h1 {
 .content {
   display: flex;
   width: 600px;
-  margin: 0 auto 300px;
-  /*border: 1px solid #a0a0a0;*/
+  margin: 0 auto 1200px;
 }
 
 .content-text {
