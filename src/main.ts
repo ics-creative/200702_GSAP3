@@ -52,7 +52,6 @@ window.addEventListener("DOMContentLoaded", () => {
           toggleActions: "play none none none", // スクロールイベントで発火するアニメーションの種類
         },
       })
-
       .to(".content-text h2", {
         opacity: 1,
         y: -10,
