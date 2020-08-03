@@ -1,6 +1,5 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import "./loading";
 
 // プラグインはgsap.registerPluginで登録
 gsap.registerPlugin(ScrollTrigger);
