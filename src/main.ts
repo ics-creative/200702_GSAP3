@@ -4,7 +4,11 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 // プラグインはgsap.registerPluginで登録
 gsap.registerPlugin(ScrollTrigger);
 
-const button = document.querySelector("header");
+const button = document.querySelector<HTMLElement>("header");
+
+if (!button) {
+  throw new Error("header element was not found");
+}
 
 const tween = gsap.to(button, {
   duration: 0.5,
@@ -60,7 +64,7 @@ const showContent = () => {
         opacity: 1,
         y: -10,
       },
-      "-=1"
+      "-=1",
     ) // 直前のアニメーションに0.7秒かぶせる
     .to(
       ".content img",
@@ -68,7 +72,7 @@ const showContent = () => {
         opacity: 1,
         x: -10,
       },
-      "-=1"
+      "-=1",
     ); // 直前のアニメーションに0.7秒かぶせる
 };
 

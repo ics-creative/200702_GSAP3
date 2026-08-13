@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
 }
+
 body {
   background: #faeee7;
 }
@@ -18,11 +19,11 @@ header {
   top: 100px;
   left: 50%;
   transform: translate(-50%);
-}
 
-header h1 {
-  font-size: 48px;
-  opacity: 0;
+  h1 {
+    font-size: 48px;
+    opacity: 0;
+  }
 }
 
 .img-container {
@@ -31,28 +32,31 @@ header h1 {
   grid-auto-flow: column;
   margin: 250px 200px 600px;
   justify-content: center;
-}
 
-.img-container img {
-  opacity: 0;
+  img {
+    opacity: 0;
+  }
 }
 
 .content {
   display: flex;
   width: 600px;
   margin: 0 auto 1200px;
+
+  img {
+    opacity: 0;
+  }
 }
 
 .content-text {
   margin-right: 50px;
-}
 
-.content-text h2 {
-  margin-bottom: 10px;
-}
+  h2 {
+    margin-bottom: 10px;
+  }
 
-.content-text h2,
-.content-text p,
-.content img {
-  opacity: 0;
+  h2,
+  p {
+    opacity: 0;
+  }
 }

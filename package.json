@@ -1,14 +1,19 @@
 {
+  "name": "gsap3-demo",
+  "private": true,
+  "type": "module",
   "scripts": {
-    "build": "webpack",
-    "watch": "webpack -w"
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "format": "oxfmt"
   },
   "dependencies": {
-    "gsap": "^3.3.4",
-    "prettier": "^2.0.5",
-    "ts-loader": "^7.0.5",
-    "typescript": "^3.9.6",
-    "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.12"
+    "gsap": "^3.15.0"
+  },
+  "devDependencies": {
+    "oxfmt": "^0.63.0",
+    "typescript": "^7.0.2",
+    "vite": "^8.2.1"
   }
 }
